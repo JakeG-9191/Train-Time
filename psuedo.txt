@@ -1,0 +1,12 @@
+User needs to be able to enter train name, destination, first train time and frequency of train
+    - use jquery to be able to pull information and populate 
+
+Next train time should then be calculated based on first train, frequency and current time
+    - use moment JS
+
+This information needs to populate and append to current train schedule layout 
+    - use firebase child-add to write all HTML
+
+This information needs to be hosted within Firebase so that data is persistent
+
+Users from other machines should be able to see information as it is populated
