@@ -8,7 +8,7 @@
     <title>Train Time</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -18,30 +18,50 @@
         <h3>These trains are always on time...</h3>
     </div>
     <div class="schedule">
-    <table class="table">
-        <thead>Current Train Schedule</thead>
-        <tr>
-            <th>Train Name</th>
-            <th>Destination</th>
-            <th>Frequency</th>
-            <th>Next Arrival</th>
-            <th>Minutes Away</th>
-        </tr>
-    </thead>
-    <tbody class="info-added">
+        <table class="table">
+            <thead>Current Train Schedule
+            <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+            </tr>
+            </thead>
+            <tbody class="info-added">
 
-    </tbody>
-    </table>
+            </tbody>
+        </table>
     </div>
+    <div class="form-holder">
+        <form id="add-train">Add Train
+            <div class="form-group">
+                <label>Train Name</label>
+                <input type="name" class="form-control" id="train-name" placeholder="Enter Train Name">
+            </div>
+            <div class="form-group">
+                <label>Destination</label>
+                <input type="name" class="form-control" id="train-destination" placeholder="Enter Destination">
+            </div>
+            <div class="form-group">
+                <label>First Train Time (HH:mm - military time)</label>
+                <input type="number" class="form-control" id="train-first" placeholder="Enter First Train Time">
+            </div>
+            <div class="form-group">
+                <label>Frequency (minutes)</label>
+                <input type="number" class="form-control" id="train-rate" placeholder="Enter Train Frequency">
+            </div>
+            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 </body>
 
 </html>
