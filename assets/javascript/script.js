@@ -19,42 +19,47 @@ $("#submit").on("click", function (event) {
     var trainDest = $("#train-destination").val().trim();
     var trainStart = $("#train-first").val().trim();
     var trainRate = $("#train-rate").val().trim();
-    console.log(trainName)
-
+    
     database.ref().push({
         trainName,
         trainDest,
         trainStart,
         trainRate,
     });
-    timeCreation();
+    
 });
 
 database.ref().on("child_added", function (childSnapshot) {
-    var dateFormat = "YYYY/MM/DD";
-    
-    console.log(timeConverted)
+
     
     var childName = (childSnapshot.val().trainName);
     var childDest = (childSnapshot.val().trainDest);
-    var childRate = (childSnapshot.val().trainRate);
-    var childNext = "Hold";
-    var childAway = "Hold";
+    var childRate = parseInt((childSnapshot.val().trainRate));
+    var childNext = ((childSnapshot.val().trainStart));
+    // var childAway = "";
     
+    var timeConverted = moment(childNext, "HH:mm").subtract(1, "day");
+    console.log(timeConverted)
+
+    var awayTime = moment().diff(moment(timeConverted), "minutes");
+    console.log(awayTime)
+
+    var timeRemaining = awayTime % childRate;
+    console.log(timeRemaining);
+
+    var timeUntilTrain = childRate - timeRemaining;
+    console.log(timeUntilTrain)
+
+    var nextTrain = moment().add(timeUntilTrain, "minutes");
+    var trainNext = moment(nextTrain).format("hh:mmA");
+
     $(".info-added").append(`<tr><td
     id="table-name">${childName}</td><td
     id="table-destination">${childDest}</td><td
     id="table-rate">${childRate}</td><td
     id="table-next">${childNext}</td><td
-    id="table-away">${childAway}</td></tr>`);
+    id="table-away">${trainNext}</td></tr>`);
     
 }), function (errorObject) {
     console.log("This has failed: " + errorObject.code);
 };
-
-function timeCreation (){
-    var timeConverted = moment(trainStart, "HH:mm").subtract(1, "day");
-    console.log(timeConverted)
-    var currentTime = moment();
-
-}
