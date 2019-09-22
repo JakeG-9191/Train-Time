@@ -1,10 +1,17 @@
+/* font-family: 'Yellowtail', cursive;
+font-family: 'Anonymous Pro', monospace;
+font-family: 'McLaren', cursive;
+font-family: 'Glegoo', serif; */
+
 body {
     width: 80%;
     margin-left: 10%;
     margin-top: 5%;
     background-image: url("https://www.amtrak.com/content/dam/projects/dotcom/english/public/images/heros/Station_Denver_HeroBanner_1_0.jpg/_jcr_content/renditions/cq5dam.web.2125.1195.jpeg");
-    background-size: 160%;
+    background-size: 200%;
     opacity: .95;
+    font-size: 20px;
+    font-family: 'Glegoo', serif;
 }
 
 .jumbotron {
@@ -39,9 +46,26 @@ h3 {
     border-right: 0;
     border-radius: 0;
     margin: 0 30% 5%;
+    font-family: 'McLaren', cursive;
 }
 
 #submit {
     padding: 1% 5%;
     margin-top: 2%;
+}
+
+h1 {
+    margin-bottom: -3%;
+    font-family: 'Yellowtail', cursive;
+    font-size: 4rem;
+}
+
+h2 {
+    margin-top: -3%;
+    font-family: 'McLaren', cursive;
+}
+
+img {
+    height: 150px;
+    width: 40%;
 }
