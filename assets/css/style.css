@@ -7,8 +7,9 @@ body {
     width: 80%;
     margin-left: 10%;
     margin-top: 5%;
-    background-image: url("https://www.amtrak.com/content/dam/projects/dotcom/english/public/images/heros/Station_Denver_HeroBanner_1_0.jpg/_jcr_content/renditions/cq5dam.web.2125.1195.jpeg");
-    background-size: 200%;
+    background-image: url("https://www.som.com/FILE/24949/denverunionstation_1575x900_magdabiernat_01jpg.jpg");
+    background-size: 110%;
+    background-attachment: fixed;
     opacity: .95;
     font-size: 20px;
     font-family: 'Glegoo', serif;
@@ -57,7 +58,7 @@ h3 {
 h1 {
     margin-bottom: -3%;
     font-family: 'Yellowtail', cursive;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 h2 {
